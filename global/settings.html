@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DeltaX-Contratc</title>
+    
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#000000">
+
+    <link rel="apple-touch-icon" href="Public/favicon 2/web-app-manifest-192x192.png">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="Public/favicon 2/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="Public/favicon 2/web-app-manifest-512x512.png">
+    <link rel="stylesheet" href="settings.css">
+</head>
+<body>
+    
+    <div class="app-container">
+        <!-- Header -->
+        <header class="top-bar">
+            &gt;_ THE CONTRACT
+        </header>
+
+        <!-- Scrollable Main Content -->
+        <main class="content-area">
+            
+            <!-- Protocol Identification Block -->
+            <div class="protocol-block">
+                <div class="protocol-label">PROTOCOL IDENTIFICATION</div>
+                <div class="protocol-text">ESTABLISH SOVEREIGN PARAMETERS. DEFINE THE LIMITS OF THE LEDGER.</div>
+            </div>
+
+            <!-- Initial Capital Input -->
+            <div class="input-group">
+                <div class="input-header">
+                    <span class="main-label">INITIAL CAPITAL</span>
+                    <span class="sub-label">[SET_PRINCIPAL]</span>
+                </div>
+                <div class="input-wrapper">
+                    <input type="number" id="capital-input" inputmode="decimal" placeholder="0.00" class="terminal-input">
+                    <span class="currency-tag">₹</span>
+                </div>
+                <div class="helper-text">THE BASE AMOUNT AGAINST WHICH ALL GROWTH IS MEASURED.</div>
+            </div>
+
+            <!-- Mandatory Hoard Input -->
+            <div class="input-group">
+                <div class="input-header">
+                    <span class="main-label">MANDATORY HOARD</span>
+                    <span class="sub-label">[MIN_RESERVE]</span>
+                </div>
+                <div class="input-wrapper">
+                    <input type="number" id="hoard-input" inputmode="numeric" placeholder="20" class="terminal-input">
+                    <span class="currency-tag">%</span>
+                </div>
+                <div class="helper-text">PERCENTAGE OF CAPITAL STRICTLY PROHIBITED FROM CIRCULATION.</div>
+            </div>
+
+            <!-- Server Link Input (DB) -->
+            <div class="input-group">
+                <div class="input-header">
+                    <span class="main-label">SERVER LINK</span>
+                    <span class="sub-label">[DB_ENDPOINT]</span>
+                </div>
+                <input type="url" id="db-api-input" placeholder="https://api.sovereign..." class="terminal-input full-width">
+                <div class="helper-text">ENCRYPTION-READY GATEWAY FOR REAL-TIME LEDGER SYNCHRONIZATION.</div>
+                
+                <a href="YOUR_YOUTUBE_LINK_HERE" target="_blank" class="yt-button">
+                    <span class="yt-icon">▶</span> HOW TO GET THE DB API
+                </a>
+            </div>
+
+            <!-- LLM API Key Input -->
+            <div class="input-group">
+                <div class="input-header">
+                    <span class="main-label">LLM API KEY</span>
+                    <span class="sub-label">[AUTH_TOKEN]</span>
+                </div>
+                <!-- Using type="password" to hide the API key for security -->
+                <input type="password" id="llm-api-input" placeholder="sk-..." class="terminal-input full-width">
+                <div class="helper-text">REQUIRED FOR AUTOMATED AUTOPSY REPORT ONCE CAPITAL IS DEPLETED.</div>
+            </div>
+
+            <hr class="divider">
+
+            <!-- Acknowledgment Checkbox -->
+            <label class="checkbox-container">
+                <input type="checkbox" id="ack-checkbox">
+                <span class="custom-checkbox"></span>
+                <span class="checkbox-text">I ACKNOWLEDGE THAT THE EXECUTION OF THIS CONTRACT IS FINAL. THE LEDGER DOES NOT PERMIT ROLLBACKS. ALL DATA PROVIDED IS MATHEMATICALLY ACCURATE.</span>
+            </label>
+
+            <!-- Submit Button -->
+            <button id="seal-btn" class="main-btn" disabled>SEAL PACT</button>
+
+            <!-- Status Footer -->
+            <div class="status-footer">
+                <div>
+                    <div>STATUS:</div>
+                    <div class="status-value" id="status-display">INITIALIZING_HANDSHAKE</div>
+                </div>
+                <div class="text-right">
+                    <div>LOC: 127.0.0.1 / REF:</div>
+                    <div class="status-value">CONTRACT_001</div>
+                </div>
+            </div>
+
+        </main>
+
+        <!-- Fixed Bottom Navigation -->
+        <nav class="bottom-nav">
+            <a href="../index.html" class="nav-item">
+                <span class="nav-icon">🏠</span>
+                <span class="nav-label">HOME</span>
+            </a>
+            <a href="#" class="nav-item">
+                <span class="nav-icon">💬</span>
+                <span class="nav-label">GUIDE</span>
+            </a>
+            <a href="confession.html" class="nav-item">
+                <span class="nav-icon">➕</span>
+                <span class="nav-label">CONFESS</span>
+            </a>
+            <a href="#" class="nav-item active">
+                <span class="nav-icon">📄</span>
+                <span class="nav-label">CONTRACT</span>
+            </a>
+        </nav>
+    </div>
+
+
+    <script type="module" src="settings.js"></script>
+</body>
+</html>

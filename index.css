@@ -1,0 +1,178 @@
+:root {
+    --bg-color: #050505;
+    --text-main: #ffffff;
+    --text-muted: #4a4a4a;
+    --border-color: #1a1a1a;
+    --green: #00ff41;
+    --red: #ff003c;
+    --font-mono: 'Courier New', Courier, monospace; 
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* Lock the body to the exact screen size and disable scrolling */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: #000000;
+    color: var(--text-main);
+    font-family: var(--font-mono);
+    display: flex;
+    justify-content: center;
+    overflow: hidden; 
+}
+
+/* Force the app container to match the height */
+.app-container {
+    width: 100%;
+    max-width: 420px;
+    height: 100%;
+    background-color: var(--bg-color);
+    border-left: 1px solid var(--border-color);
+    border-right: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+}
+
+/* Prevent the top bar from shrinking */
+.top-bar {
+    padding: 15px 20px;
+    border-bottom: 1px solid var(--border-color);
+    font-size: 1rem;
+    font-weight: bold;
+    flex-shrink: 0; 
+}
+
+/* Use Flexbox to dynamically space the inner sections */
+main {
+    padding: 0 30px;
+    flex-grow: .7;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    gap: 6vh;
+    overflow: hidden;
+}
+
+.label {
+    color: var(--text-muted);
+    font-size: 0.7rem;
+    letter-spacing: 3px;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+}
+
+.usable-capital .value {
+    font-size: 3.5rem;
+    font-weight: 900;
+    letter-spacing: -2px;
+    margin: 0;
+    line-height: 1;
+}
+
+.reserves {
+    border-left: 2px solid var(--text-muted);
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 3vh; 
+}
+
+.sub-value {
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: -1px;
+    line-height: 1;
+}
+
+.system-status {
+    border: 1px solid var(--border-color);
+    padding: 20px;
+}
+
+.status-item {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.indicator {
+    width: 8px;
+    height: 8px;
+    display: inline-block;
+    margin-right: 15px;
+}
+
+.indicator.green {
+    background-color: var(--green);
+}
+
+.indicator.red {
+    background-color: var(--red);
+}
+
+/* Prevent bottom nav from shrinking and give it a fixed height */
+.bottom-nav {
+    display: flex;
+    border-top: 1px solid var(--border-color);
+    background-color: #000;
+    flex-shrink: 0; 
+    height: 80px; 
+}
+
+.nav-item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-muted);
+    cursor: pointer;
+    border-right: 1px solid var(--border-color);
+    transition: all 0.2s ease;
+    text-decoration: none;
+    
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-item:last-child {
+    border-right: none;
+}
+
+.nav-item.active {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.nav-item.active .nav-label {
+    color: #000000;
+}
+
+.nav-icon {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.nav-label {
+    font-size: 0.55rem;
+    letter-spacing: 1px;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+.muted{
+    opacity: 0.5;
+}
+.terminal-title{
+    color: VAR(--green);
+}

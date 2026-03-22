@@ -1,0 +1,15 @@
+{
+  "name": "DeltaX Sovereign Ledger",
+  "short_name": "DeltaX",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#00ff41",
+  "icons": [
+    {
+      "src": "Public/icons/favicon-96x96.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    }
+  ]
+}

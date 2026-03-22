@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DeltaX</title>
+    
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#000000">
+
+    <link rel="apple-touch-icon" href="Public/favicon 2/web-app-manifest-192x192.png">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="Public/favicon 2/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="Public/favicon 2/web-app-manifest-512x512.png">
+
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <div class="app-container">
+        <!-- Top Terminal Header -->
+        <header class="top-bar">
+            <span class="terminal-icon">&gt;_</span> <span class="terminal-title">Codevellly</span>
+        </header>
+
+        <!-- Main Content Area -->
+        <!-- Main Content Area -->
+        <main>
+            <section class="usable-capital">
+                <div class="label">USABLE CAPITAL</div>
+                <!-- ADDED ID HERE -->
+                <div class="value" id="usable-capital-display">₹0</div>
+            </section>
+
+            <section class="reserves">
+                <div class="reserve-item">
+                    <div class="label">TRUE RESERVES</div>
+                    <!-- ADDED ID HERE -->
+                    <div class="value sub-value" id="true-reserves-display">₹0</div>
+                </div>
+                <div class="reserve-item">
+                    <div class="label">MANDATORY HOARD</div>
+                    <!-- ADDED ID HERE -->
+                    <div class="value sub-value" id="mandatory-hoard-display">₹0</div>
+                </div>
+            </section>
+
+            <section class="system-status">
+                <div class="label">SYSTEM STATUS</div>
+                <div class="status-item">
+                    <span class="indicator green"></span> SYSTEM_STABLE
+                </div>
+                <!-- ADDED ID HERE TO THE CONTAINER -->
+                <div class="status-item muted" id="sins-status-container">
+                    <span class="indicator red"></span> SINS_DETECTED
+                </div>
+            </section>
+        </main>
+
+        <!-- Bottom Navigation -->
+        <nav class="bottom-nav">
+            <div class="nav-item active">
+                <span class="nav-icon">🏛</span>
+                <span class="nav-label">HOME</span>
+            </div>
+            <a class="nav-item" href="">
+                <div class="flex-column">
+                    <span class="nav-icon">💬</span>
+                    <span class="nav-label">Guide</span>
+                </div>
+            </a>
+
+            <a class="nav-item" href="global/confession.html">
+                <div class="flex-column">
+                    <span class="nav-icon">➕</span>
+                    <span class="nav-label">CONFESS</span>
+                </div>
+            </a>
+
+            <a class="nav-item" href="./global/settings.html">
+                <div class="flex-column">
+                    <span class="nav-icon">📄</span>
+                    <span class="nav-label">CONTRACT</span>
+                </div>
+            </a>
+        </nav>
+    </div>
+
+    <script type="module" src="index.js"></script>
+</body>
+
+</html>

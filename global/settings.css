@@ -1,0 +1,291 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #1c1c1c; 
+    color: #ffffff;
+    /* Use monospace for the strict terminal vibe */
+    font-family: 'Courier New', Courier, monospace; 
+    display: flex;
+    justify-content: center;
+    /* Allow scrolling on the body */
+    overflow-y: auto; 
+}
+
+.app-container {
+    width: 100%;
+    max-width: 420px;
+    min-height: 100vh;
+    background-color: #050505; 
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    /* Extra padding at the bottom so content doesn't get hidden behind the fixed nav */
+    padding-bottom: 85px; 
+}
+
+/* Header */
+.top-bar {
+    padding: 15px 20px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    background-color: #050505;
+    border-bottom: 1px solid #1a1a1a;
+}
+
+/* Main Content Area */
+.content-area {
+    padding: 30px 20px;
+}
+
+/* Protocol Block */
+.protocol-block {
+    border-left: 4px solid #ffffff;
+    padding-left: 15px;
+    margin-bottom: 40px;
+}
+
+.protocol-label {
+    color: #555;
+    font-size: 0.65rem;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+}
+
+.protocol-text {
+    font-size: 1rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    line-height: 1.4;
+}
+
+/* Input Groups */
+.input-group {
+    margin-bottom: 40px;
+}
+
+.input-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.main-label {
+    font-weight: bold;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+}
+
+.sub-label {
+    color: #555;
+    font-size: 0.7rem;
+}
+
+.input-wrapper {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #333;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+.terminal-input {
+    background: transparent;
+    border: none;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.5rem;
+    outline: none;
+    flex-grow: 1;
+}
+
+.terminal-input::placeholder {
+    color: #222;
+}
+
+.terminal-input.full-width {
+    border-bottom: 1px solid #333;
+    width: 100%;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+.currency-tag {
+    color: #555;
+    font-size: 1.2rem;
+    margin-left: 10px;
+}
+
+.helper-text {
+    color: #555;
+    font-size: 0.55rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    line-height: 1.4;
+}
+
+/* YouTube Button */
+.yt-button {
+    display: inline-flex;
+    align-items: center;
+    background-color: #2a0808;
+    color: #ff4e4e;
+    border: 1px solid #ff0000;
+    padding: 8px 12px;
+    margin-top: 15px;
+    text-decoration: none;
+    font-size: 0.7rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: 0.2s;
+}
+
+.yt-button:active {
+    background-color: #ff0000;
+    color: #fff;
+}
+
+.yt-icon {
+    margin-right: 6px;
+    font-size: 0.8rem;
+}
+
+/* Divider */
+.divider {
+    border: none;
+    border-top: 1px dashed #333;
+    margin: 40px 0;
+}
+
+/* Checkbox Section */
+.checkbox-container {
+    display: flex;
+    align-items: flex-start;
+    cursor: pointer;
+    margin-bottom: 30px;
+}
+
+.checkbox-container input {
+    display: none; /* Hide default checkbox */
+}
+
+.custom-checkbox {
+    min-width: 16px;
+    height: 16px;
+    border: 1px solid #555;
+    margin-right: 15px;
+    margin-top: 2px;
+    display: inline-block;
+    position: relative;
+}
+
+.checkbox-container input:checked + .custom-checkbox {
+    background-color: #ffffff;
+}
+
+.checkbox-text {
+    font-size: 0.65rem;
+    color: #888;
+    line-height: 1.5;
+    letter-spacing: 1px;
+}
+
+/* Submit Button */
+.main-btn {
+    width: 100%;
+    background-color: #ffffff;
+    color: #000000;
+    border: none;
+    padding: 18px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.2rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    cursor: pointer;
+    margin-bottom: 40px;
+    transition: 0.2s;
+}
+
+.main-btn:disabled {
+    background-color: #333;
+    color: #111;
+    cursor: not-allowed;
+}
+
+.main-btn:not(:disabled):active {
+    opacity: 0.8;
+}
+
+/* Status Footer */
+.status-footer {
+    display: flex;
+    justify-content: space-between;
+    color: #555;
+    font-size: 0.55rem;
+    letter-spacing: 1px;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.status-value {
+    color: #888;
+    margin-top: 3px;
+}
+
+/* Fixed Bottom Navigation */
+.bottom-nav {
+    display: flex;
+    border-top: 1px solid #1a1a1a;
+    background-color: #000;
+    height: 75px; 
+    
+    /* These properties lock it to the bottom */
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    max-width: 420px; /* Must match app-container max-width */
+    z-index: 9999;    /* Highest z-index */
+}
+
+.nav-item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #555;
+    cursor: pointer;
+    border-right: 1px solid #1a1a1a;
+    text-decoration: none;
+    font-family: system-ui, -apple-system, sans-serif;
+}
+
+.nav-item:last-child {
+    border-right: none;
+}
+
+.nav-item.active {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.nav-item.active .nav-icon {
+    color: #000000;
+}
+
+.nav-icon {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.nav-label {
+    font-size: 0.5rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}

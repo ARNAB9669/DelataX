@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DeltaX-Confession</title>
+    
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#000000">
+
+    <link rel="apple-touch-icon" href="Public/favicon 2/web-app-manifest-192x192.png">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="Public/favicon 2/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="Public/favicon 2/web-app-manifest-512x512.png">
+    <!-- Updated CSS link -->
+    <link rel="stylesheet" href="confession.css">
+</head>
+
+<body>
+
+    <div class="app-container">
+        <!-- Header -->
+        <header class="top-bar">
+            &gt;_ THE CONFESSION
+        </header>
+
+        <!-- Toggle -->
+        <div class="type-toggle">
+            <button class="toggle-btn active" id="btn-debit">DEBIT</button>
+            <button class="toggle-btn" id="btn-credit">CREDIT</button>
+        </div>
+
+        <!-- Amount Display -->
+        <section class="amount-section">
+            <span class="currency">₹</span>
+            <input type="number" id="amount-input" placeholder="00.00" class="amount color-debit">
+        </section>
+
+        <!-- Tag Header -->
+        <div class="tag-header">
+            <span>Add Tag</span>
+            <span class="dropdown-arrow">▼</span>
+        </div>
+
+        <!-- Tag Grid -->
+        <section class="tag-grid">
+            <div class="tag-cell" data-tag="food">
+                <div class="tag-name">FOOD</div>
+                <div class="tag-percent" id="percent-food">0%</div>
+            </div>
+            <div class="tag-cell" data-tag="travel">
+                <div class="tag-name">Travel</div>
+                <div class="tag-percent" id="percent-travel">0%</div>
+            </div>
+            <div class="tag-cell" data-tag="hotel">
+                <div class="tag-name">HOTEL</div>
+                <div class="tag-percent" id="percent-hotel">0%</div>
+            </div>
+            <div class="tag-cell" data-tag="hospital">
+                <div class="tag-name">HOSPITAL</div>
+                <div class="tag-percent" id="percent-hospital">0%</div>
+            </div>
+            <div class="tag-cell" data-tag="med">
+                <div class="tag-name">MED</div>
+                <div class="tag-percent" id="percent-med">0%</div>
+            </div>
+            <div class="tag-cell" data-tag="msc">
+                <div class="tag-name">MSc</div>
+                <div class="tag-percent" id="percent-msc">0%</div>
+            </div>
+        </section>
+
+        <!-- Submit Button -->
+        <section class="submit-section">
+            <button id="action-btn" class="main-btn">Log Sin</button>
+        </section>
+
+        <!-- Bottom Navigation -->
+        <nav class="bottom-nav">
+            <a href="../index.html" class="nav-item">
+                <span class="nav-icon">🏠</span>
+                <span class="nav-label">HOME</span>
+            </a>
+            <a href="#" class="nav-item">
+                <span class="nav-icon">💬</span>
+                <span class="nav-label">GUIDE</span>
+            </a>
+            <a href="#" class="nav-item active">
+                <span class="nav-icon">➕</span>
+                <span class="nav-label">CONFESS</span>
+            </a>
+            <a href="settings.html" class="nav-item">
+                <span class="nav-icon">📄</span>
+                <span class="nav-label">CONTRACT</span>
+            </a>
+        </nav>
+    </div>
+
+    <!-- Updated JS link -->
+    <script type="module" src="confession.js"></script>
+</body>
+
+</html>
