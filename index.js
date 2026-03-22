@@ -1,4 +1,4 @@
-import { fetchAPI } from './Tools/fetcAPI.js';
+import { fetchAPI } from '../tools/fetcAPI.js';
 
 document.addEventListener('DOMContentLoaded', async () => {
     
