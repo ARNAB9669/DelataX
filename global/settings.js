@@ -1,5 +1,5 @@
 // 1. IMPORT YOUR TOOL AT THE VERY TOP
-import { fetchAPI } from '../Tools/fetcAPI.js';
+import { fetchAPI } from '../tools/fetcAPI.js';
 
 // Grab the elements using their specific IDs
 const ackCheckbox = document.getElementById('ack-checkbox');
